@@ -1,7 +1,7 @@
 import React from 'react';
 
 const activities = [
-  { initials: 'JD', name: 'John Doe', action: 'purchased Premium Plan', time: '2 minutes ago', color: '#6E011A' },
+  { initials: 'JD', name: 'John Deere', action: 'purchased Premium Plan', time: '2 minutes ago', color: '#6E011A' },
   { initials: 'AS', name: 'Anna Smith', action: 'submitted a support ticket', time: '15 minutes ago', color: '#8c6534' },
   { initials: 'MJ', name: 'Mike Johnson', action: 'upgraded subscription', time: '1 hour ago', color: '#3b6e5a' },
   { initials: 'EW', name: 'Emily White', action: 'downloaded the invoice', time: '2 hours ago', color: '#4a3b6e' },
