@@ -78,8 +78,8 @@ const browsers = [
 /* ── Countries ── */
 const countries = [
   { flag: '🇺🇸', code: 'US', name: 'United States', pct: 38, color: 'var(--tan)' },
-  { flag: '🇺🇰', code: 'UK', name: 'United Kingdom', pct: 18, color: 'var(--tan-dark)' },
-  { flag: '🇩🇪', code: 'DE', name: 'Denmark', pct: 12, color: 'var(--primary-light)' },
+  { flag: '🇬🇧', code: 'UK', name: 'United Kingdom', pct: 18, color: 'var(--tan-dark)' },
+  { flag: '🇩🇰', code: 'DK', name: 'Denmark', pct: 12, color: 'var(--primary-light)' },
   { flag: '🇨🇦', code: 'CA', name: 'Canada', pct: 9, color: 'var(--primary)' },
 ];
 
