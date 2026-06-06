@@ -19,8 +19,8 @@ export default function Transactions() {
           <div className="section-sub">Latest Orders and Payments</div>
         </div>
         <div className="header-actions">
-          <button className="action-btn">View All</button>
-          <button className="action-btn">Export</button>
+          <button className="action-btn action-btn-secondary">View All</button>
+          <button className="action-btn action-btn-primary">Export</button>
         </div>
       </div>
       <div className="table-scroll">

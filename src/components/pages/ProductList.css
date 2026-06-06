@@ -1,0 +1,656 @@
+/* ProductList.css */
+/* Styled to match GlassDash theme - dark maroon + tan glass design */
+
+/* main page wrapper */
+.product-page {
+  padding: 28px 28px 40px;
+  animation: fadeInUp 0.5s ease both;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+/* top bar */
+.product-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.product-top-bar h2 {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.top-bar-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* add product button */
+.btn-add-product {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--tan-light);
+  border: 1px solid rgba(181, 173, 137, 0.2);
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  transition: all var(--transition);
+  box-shadow: 0 4px 15px rgba(110, 1, 26, 0.3);
+}
+
+.btn-add-product:hover {
+  box-shadow: 0 6px 20px rgba(110, 1, 26, 0.5);
+  transform: translateY(-1px);
+}
+
+/* this month button */
+.btn-this-month {
+  background: var(--glass);
+  color: var(--text-muted);
+  border: 1px solid var(--glass-border);
+  padding: 9px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  transition: all var(--transition);
+  backdrop-filter: blur(8px);
+}
+
+.btn-this-month:hover {
+  background: var(--glass-hover);
+  color: var(--tan);
+  border-color: var(--tan-dark);
+}
+
+/* table wrapper - glass card */
+.table-wrapper {
+  overflow-x: auto;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow), var(--glow-tan);
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* table header */
+.product-table thead tr {
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.product-table thead th {
+  padding: 14px 18px;
+  text-align: left;
+  color: var(--text-dim);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* table rows */
+.product-table tbody tr {
+  border-bottom: 1px solid var(--glass-border);
+  transition: background var(--transition);
+}
+
+.product-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.product-table tbody tr:hover {
+  background: var(--glass-hover);
+}
+
+.product-table tbody td {
+  padding: 14px 18px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  vertical-align: middle;
+}
+
+/* product name column */
+.product-name-col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* emoji image box - shows a big emoji instead of an svg icon */
+.product-img-box {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, rgba(110, 1, 26, 0.25), rgba(181, 173, 137, 0.1));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* the emoji inside the box */
+.product-emoji {
+  font-size: 20px;
+  line-height: 1;
+  user-select: none;
+}
+
+/* product name and size */
+.product-name-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name-text .pname {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.product-name-text .psize {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+/* price */
+.price-cell {
+  color: var(--tan-light);
+  font-weight: 600;
+  font-size: 0.87rem;
+}
+
+/* stock */
+.stock-info span:first-child {
+  display: block;
+  color: var(--tan);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.stock-info span:last-child {
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  margin-top: 2px;
+}
+
+/* category badge */
+.category-badge {
+  display: inline-block;
+  background: rgba(110, 1, 26, 0.2);
+  border: 1px solid rgba(110, 1, 26, 0.3);
+  color: var(--tan-light);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+/* rating */
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(181, 173, 137, 0.1);
+  border: 1px solid rgba(181, 173, 137, 0.2);
+  padding: 3px 9px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  color: var(--tan-light);
+  font-weight: 600;
+}
+
+.rating-badge .star {
+  color: var(--tan);
+  font-size: 12px;
+}
+
+.review-count {
+  color: var(--text-dim);
+  font-size: 0.72rem;
+}
+
+/* --- ACTION BUTTONS --- */
+/* buttons are always visible with their colors - no hover-only hiding */
+
+.action-btns {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* base style shared by all 3 buttons */
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* make sure SVG inside buttons always inherits the color */
+.action-btn svg {
+  display: block;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+/* view button - blue/cyan, always visible */
+.action-btn.view-btn {
+  background: rgba(100, 180, 255, 0.12);
+  border-color: rgba(100, 180, 255, 0.5);
+  color: #7ec8f7;
+}
+
+/* directly set svg stroke color for view icon */
+.action-btn.view-btn svg {
+  stroke: #7ec8f7;
+}
+
+.action-btn.view-btn:hover {
+  background: rgba(100, 180, 255, 0.22);
+  border-color: rgba(100, 180, 255, 0.75);
+  transform: scale(1.08);
+}
+
+.action-btn.view-btn:hover svg {
+  stroke: #aadeff;
+}
+
+/* edit button - tan/gold, always visible */
+.action-btn.edit-btn {
+  background: rgba(181, 173, 137, 0.12);
+  border-color: rgba(181, 173, 137, 0.5);
+  color: #b5ad89;
+}
+
+/* directly set svg stroke color for edit icon */
+.action-btn.edit-btn svg {
+  stroke: #b5ad89;
+}
+
+.action-btn.edit-btn:hover {
+  background: rgba(181, 173, 137, 0.22);
+  border-color: rgba(181, 173, 137, 0.75);
+  transform: scale(1.08);
+}
+
+.action-btn.edit-btn:hover svg {
+  stroke: #d4cca8;
+}
+
+/* delete button - red, always visible */
+.action-btn.delete-btn {
+  background: rgba(180, 20, 50, 0.15);
+  border-color: rgba(200, 40, 70, 0.55);
+  color: #e05070;
+}
+
+/* directly set svg stroke color for delete icon */
+.action-btn.delete-btn svg {
+  stroke: #e05070;
+}
+
+.action-btn.delete-btn:hover {
+  background: rgba(180, 20, 50, 0.28);
+  border-color: rgba(200, 40, 70, 0.8);
+  transform: scale(1.08);
+}
+
+.action-btn.delete-btn:hover svg {
+  stroke: #ff4466;
+}
+
+/* empty row message */
+.empty-row {
+  text-align: center;
+  padding: 50px !important;
+  color: var(--text-dim);
+}
+
+/* --- PAGINATION --- */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.page-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  transition: all var(--transition);
+  backdrop-filter: blur(8px);
+}
+
+.page-btn:hover {
+  background: var(--glass-hover);
+  color: var(--tan);
+  border-color: var(--tan-dark);
+}
+
+.page-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-color: rgba(181, 173, 137, 0.2);
+  color: var(--tan-light);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(110, 1, 26, 0.3);
+}
+
+.page-btn.page-prev,
+.page-btn.page-next {
+  width: auto;
+  padding: 0 12px;
+}
+
+/* --- TOAST --- */
+.toast-message {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(8, 2, 6, 0.95);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  color: var(--text);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  animation: slideInToast 0.3s ease;
+}
+
+.toast-message.success {
+  border-left: 3px solid var(--tan);
+}
+
+.toast-message.error {
+  border-left: 3px solid var(--primary-light);
+}
+
+@keyframes slideInToast {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- MODAL --- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-box {
+  background: rgba(8, 2, 6, 0.96);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 30px;
+  width: 440px;
+  max-width: 92%;
+  box-shadow: var(--shadow), var(--glow-tan);
+  backdrop-filter: blur(20px);
+  animation: fadeInUp 0.3s ease;
+}
+
+.modal-box h3 {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 13px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  backdrop-filter: blur(8px);
+}
+
+.form-group input::placeholder {
+  color: var(--text-dim);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--tan-dark);
+  box-shadow: 0 0 0 3px rgba(181, 173, 137, 0.08);
+}
+
+.form-group select option {
+  background: #0d0208;
+  color: var(--text);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.btn-cancel {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  transition: all var(--transition);
+}
+
+.btn-cancel:hover {
+  background: var(--glass-hover);
+  color: var(--text);
+}
+
+.btn-save {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border: 1px solid rgba(181, 173, 137, 0.2);
+  color: var(--tan-light);
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: all var(--transition);
+  box-shadow: 0 4px 12px rgba(110, 1, 26, 0.3);
+}
+
+.btn-save:hover {
+  box-shadow: 0 6px 20px rgba(110, 1, 26, 0.5);
+  transform: translateY(-1px);
+}
+
+.product-view-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+}
+
+.product-view-name {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.product-view-sub {
+  color: var(--text-dim);
+  font-size: 0.76rem;
+  margin-top: 3px;
+}
+
+.product-view-field input[readOnly] {
+  cursor: default;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text-muted);
+}
+
+.product-view-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 3px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 13px;
+}
+
+.product-view-summary span:first-child {
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.product-view-summary strong {
+  color: var(--tan-light);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+/* checkbox accent */
+.product-table input[type="checkbox"] {
+  accent-color: var(--primary-light);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+/* sidebar submenu */
+.products-submenu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 38px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.submenu-item {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: color var(--transition), background var(--transition);
+  font-family: var(--font-body);
+}
+
+.submenu-item:hover {
+  color: var(--text);
+  background: var(--glass);
+}
+
+.submenu-active {
+  color: var(--tan-light) !important;
+  font-weight: 600;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .product-page {
+    padding: 16px;
+  }
+
+  .product-top-bar h2 {
+    font-size: 1.1rem;
+  }
+
+  .btn-add-product {
+    font-size: 0.78rem;
+    padding: 8px 13px;
+  }
+
+  .product-view-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
