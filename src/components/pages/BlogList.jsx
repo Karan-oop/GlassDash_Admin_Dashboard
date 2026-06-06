@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BLOG_POSTS } from "./blogData";
+import { BLOG_POSTS } from "./BlogData";
 import "./BlogList.css";
 
 const PER_PAGE = 6;

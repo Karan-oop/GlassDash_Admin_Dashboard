@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getBlogById, getRelatedPosts } from "./blogData";
+import { getBlogById, getRelatedPosts } from "./BlogData";
 import "./BlogDetail.css";
 
 function ThumbArtwork({ blog }) {

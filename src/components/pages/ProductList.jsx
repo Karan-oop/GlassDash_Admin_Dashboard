@@ -3,7 +3,7 @@
 // Uses the same glass card style, typography system, and maroon+tan color theme
 
 import { useState } from "react";
-import "../Pages/ProductList.css";
+import "./ProductList.css";
 
 // dummy products - replace with real API data later
 const startingProducts = [
