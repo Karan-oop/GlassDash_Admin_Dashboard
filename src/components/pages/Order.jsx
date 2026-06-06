@@ -194,7 +194,7 @@ function ActionIcon({ type }) {
     );
   }
 
-  if (type === "download") {
+ if (type === "download") {
     return (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 3v12" />
@@ -435,20 +435,7 @@ export default function Order() {
                   </td>
                   <td>
                     <div className="order-actions">
-                      <button type="button" className="order-mini-btn" onClick={() => setActiveOrder(order)}>
-                        <ActionIcon type="view" />
-                        View Details
-                      </button>
-                      <button
-                        type="button"
-                        className="order-mini-btn danger"
-                        onClick={() => setCancelTarget(order)}
-                        disabled={order.orderStatus === "Cancelled" || order.orderStatus === "Returned" || order.orderStatus === "Refunded"}
-                      >
-                        <ActionIcon type="cancel" />
-                        Cancel Order
-                      </button>
-                      <button type="button" className="order-mini-btn" onClick={() => handleReorder(order)}>
+ <button type="button" className="order-mini-btn" onClick={() => handleReorder(order)}>
                         <ActionIcon type="reorder" />
                         Reorder
                       </button>

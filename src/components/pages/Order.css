@@ -295,14 +295,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition);
-  white-space: nowrap;
+   white-space: nowrap;
 }
 
 .order-mini-btn svg {
   width: 14px;
   height: 14px;
 }
-
 .order-mini-btn:hover:not(:disabled) {
   background: var(--glass-hover);
   color: var(--text);
