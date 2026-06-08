@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 /* ── Top stat cards ── */
-const analyticsCards = [
+    const analyticsCards = [
   {
     label: 'Page Views',
     value: '2.4M',
