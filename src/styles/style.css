@@ -1549,15 +1549,15 @@ a.nav-item.active { color: var(--tan-light); }
   animation: fadeInUp 0.45s ease both;
 }
 @media (max-width: 640px) {
-  .pg-page { padding: 16px 14px 36px; }
+  .pg-page { padding: 14px 14px 32px; } /* Adjusted to match dashboard content-wrapper responsive padding */
 }
 
 .pg-title {
   font-family: var(--font-title);
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 1.05rem; /* Adjusted to match dashboard section titles */
+  font-weight: 600; /* Adjusted to match dashboard section titles */
   color: var(--text);
-  margin-bottom: 24px;
+  margin-bottom: 20px; /* Adjusted to match spacing after dashboard section headers */
   margin-top: 4px;
 }
 
@@ -1814,7 +1814,7 @@ a.nav-item.active { color: var(--tan-light); }
   border-radius: var(--radius-sm);
   border: none;
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  color: var(--tan-light);
+  color: #fff; /* Adjusted to match dashboard primary action button color */
   font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 600;
@@ -2815,11 +2815,11 @@ body.light-theme .dropdown-item:hover {
 
 .pc-section-label {
   font-family: var(--font-title);
-  font-size: 1rem;
+  font-size: 1.05rem; /* Adjusted to match dashboard section titles */
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 18px;
-  padding-bottom: 12px;
+  margin-bottom: 20px; /* Adjusted to match spacing after dashboard section headers */
+  padding-bottom: 10px; /* Adjusted to match spacing after dashboard section headers */
   border-bottom: 1px solid var(--glass-border);
 }
 

@@ -5,7 +5,7 @@ const userCards = [
   {
     label: 'Total Users',
     value: '24,521',
-    change: '+5%',
+    change: '+25.99%',
     positive: true,
     icon: UsersIcon,
     iconColor: '#10B981',
@@ -41,7 +41,7 @@ const userCards = [
 ];
 
 const usersData = [
-  { initials: 'JD', color: '#6E011A', name: 'John Deere', email: 'john.dee@example.com', role: 'Admin in Chief', status: 'Active', joined: 'Jan 15, 2024', lastActive: '2 mins ago' },
+  { initials: 'JD', color: '#6E011A', name: 'John Deere', email: 'john.dee@gmail.com', role: 'Admin in Chief', status: 'Active', joined: 'Jan 15, 2024', lastActive: '2 mins ago' },
   { initials: 'AS', color: '#8c6534', name: 'Anna Smith', email: 'smith.anna@gmail.com', role: 'Editor', status: 'Active', joined: 'Feb 22, 2024', lastActive: '15 mins ago' },
   { initials: 'MJ', color: '#3b6e5a', name: 'Mike Johnson', email: 'mike.john@gmail.com', role: 'User', status: 'Away', joined: 'Mar 10, 2024', lastActive: '2 hours ago' },
   { initials: 'EW', color: '#6e5a3b', name: 'Emily White', email: 'emily.white@gmail.com', role: 'Moderator', status: 'Active', joined: 'Apr 5, 2024', lastActive: '30 mins ago' },

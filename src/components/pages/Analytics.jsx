@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Eye, Users as UsersIcon, TrendingDown, Clock } from 'lucide-react';
 
 /* ── Top stat cards ── */
     const analyticsCards = [
@@ -7,48 +8,36 @@ import React, { useState } from 'react';
     value: '2.4M',
     change: '+34.5%',
     positive: true,
-    colorClass: 'tan',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-      </svg>
-    ),
+    icon: Eye,
+    iconColor: '#3B82F6',
+    iconBg: 'rgba(59, 130, 246, 0.12)',
   },
   {
     label: 'Unique Visitors',
     value: '847K',
     change: '+18.3%',
     positive: true,
-    colorClass: 'tan',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-      </svg>
-    ),
+    icon: UsersIcon,
+    iconColor: '#10B981',
+    iconBg: 'rgba(16, 185, 129, 0.12)',
   },
   {
     label: 'Bounce Rate',
     value: '38.2%',
-    change: '+5.2%',
+    change: '-5.2%',
     positive: false,
-    colorClass: 'red',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
-      </svg>
-    ),
+    icon: TrendingDown,
+    iconColor: '#F59E0B',
+    iconBg: 'rgba(245, 158, 11, 0.12)',
   },
   {
     label: 'Avg. Session',
     value: '8m 32s',
     change: '+12.1%',
     positive: true,
-    colorClass: 'tan',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>
-      </svg>
-    ),
+    icon: Clock,
+    iconColor: '#8B5CF6',
+    iconBg: 'rgba(139, 92, 246, 0.12)',
   },
 ];
 
@@ -139,18 +128,29 @@ export default function Analytics() {
       <h1 className="pg-title">Analytics</h1>
 
       {/* Top Cards */}
-      <div className="cards-grid pg-cards-anim">
-        {analyticsCards.map((c, i) => (
-          <div key={c.label} className="glass-card dash-card" style={{ animationDelay: `${i * 0.07}s` }}>
-            <div className={`card-icon ${c.colorClass}`}>{c.icon}</div>
-            <div className="card-label">{c.label}</div>
-            <div className="card-value">{c.value}</div>
-            <span className={`card-change ${c.positive ? 'positive' : 'negative'}`}>
-              {c.positive ? '▲' : '▼'} {c.change}
-            </span>
-            <div className="card-glow" />
-          </div>
-        ))}
+      <div className="premium-cards-grid pg-cards-anim">
+        {analyticsCards.map((card, i) => {
+          const IconComponent = card.icon;
+          return (
+            <div key={card.label} className="premium-card" style={{ animationDelay: `${i * 0.07}s` }}>
+              <div className="premium-card-content">
+                <div className="premium-card-text">
+                  <span className="premium-card-label">{card.label}</span>
+                  <span className="premium-card-value">{card.value}</span>
+                  <span className={`premium-card-trend ${card.positive ? 'trend-up' : 'trend-down'}`}>
+                    <span className="trend-arrow">{card.positive ? '\u2191' : '\u2193'}</span>
+                    {' '}{card.change}{' '}
+                    <span className="trend-separator">·</span>
+                    {' '}Last 30 days
+                  </span>
+                </div>
+                <div className="premium-card-icon-wrap" style={{ background: card.iconBg }}>
+                  <IconComponent size={28} color={card.iconColor} strokeWidth={1.8} />
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {/* Chart + Top Pages row */}

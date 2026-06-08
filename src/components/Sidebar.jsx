@@ -115,18 +115,18 @@ export default function Sidebar({ isOpen: controlledOpen, onClose }) {
   const isOpen = isControlled ? controlledOpen : internalOpen;
 
   const [productsOpen, setProductsOpen] = useState(
-    location.pathname.startsWith('/products')
+    location.pathname === '/products' || location.pathname.startsWith('/products/')
   );
 
   const [blogOpen, setBlogOpen] = useState(
-    location.pathname.startsWith('/blogs')
+    location.pathname === '/blogs' || location.pathname.startsWith('/blogs/')
   );
 
   const [couponOpen, setCouponOpen] = useState(
-    location.pathname.startsWith('/coupons')
+    location.pathname === '/coupons' || location.pathname.startsWith('/coupons/')
   );
   const [userOpen, setUserOpen] = useState(
-    location.pathname.startsWith('/user')
+    location.pathname === '/user' || location.pathname.startsWith('/user/')
   );
 
   useEffect(() => {
@@ -135,25 +135,25 @@ export default function Sidebar({ isOpen: controlledOpen, onClose }) {
   }, []);
 
   useEffect(() => {
-    if (location.pathname.startsWith('/products')) {
+    if (location.pathname === '/products' || location.pathname.startsWith('/products/')) {
       setProductsOpen(true);
     }
   }, [location.pathname]);
 
   useEffect(() => {
-    if (location.pathname.startsWith('/blogs')) {
+    if (location.pathname === '/blogs' || location.pathname.startsWith('/blogs/')) {
       setBlogOpen(true);
     }
   }, [location.pathname]);
 
   useEffect(() => {
-    if (location.pathname.startsWith('/coupons')) {
+    if (location.pathname === '/coupons' || location.pathname.startsWith('/coupons/')) {
       setCouponOpen(true);
     }
   }, [location.pathname]);
 
   useEffect(() => {
-    if (location.pathname.startsWith('/user')) {
+    if (location.pathname === '/user' || location.pathname.startsWith('/user/')) {
       setUserOpen(true);
     }
   }, [location.pathname]);
@@ -186,10 +186,10 @@ export default function Sidebar({ isOpen: controlledOpen, onClose }) {
     setUserOpen(prev => !prev);
   }
 
-  const isProductsActive = location.pathname.startsWith('/products');
-  const isBlogActive = location.pathname.startsWith('/blogs');
-  const isCouponActive = location.pathname.startsWith('/coupons');
-  const isUserActive = location.pathname.startsWith('/user');
+  const isProductsActive = location.pathname === '/products' || location.pathname.startsWith('/products/');
+  const isBlogActive = location.pathname === '/blogs' || location.pathname.startsWith('/blogs/');
+  const isCouponActive = location.pathname === '/coupons' || location.pathname.startsWith('/coupons/');
+  const isUserActive = location.pathname === '/user' || location.pathname.startsWith('/user/');
 
   return (
     <>
