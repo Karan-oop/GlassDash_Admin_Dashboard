@@ -28,7 +28,6 @@ import BlogList from './components/pages/BlogList';
 import BlogDetail from './components/pages/BlogDetail';
 import BlogCreate from './components/pages/BlogCreate';
 import LoginPage from './components/pages/LoginPage';
-import Upload from './components/pages/Upload';
 
 // Agentation (dev tool)
 import { Agentation } from "agentation";
@@ -90,7 +89,6 @@ function AppShell({ isMobile, sidebarOpen, openSidebar, closeSidebar }) {
             <Route path="/blogs" element={<BlogList />} />
             <Route path="/blogs/:id" element={<BlogDetail />} />
             <Route path="/blogs/create" element={<BlogCreate />} />
-            <Route path="/upload" element={<Upload />} />
           </Routes>
         </main>
         <Footer />

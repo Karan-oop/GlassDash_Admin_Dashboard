@@ -96,7 +96,6 @@ const mainItems = [
   { label: 'Dashboard', path: '/' },
   { label: 'Analytics',  path: '/analytics' },
   { label: 'Users',      path: '/users' },
-  { label: 'Upload', path: '/upload' },
 ];
 
 const accountItems = [

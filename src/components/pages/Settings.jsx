@@ -1,13 +1,12 @@
 // Settings.jsx — Final Version
 // Location: src/components/pages/Settings.jsx
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SecurityTab from "../settings/SecurityTab";
 import NotificationsTab from "../settings/NotificationsTab";
 import AppearanceTab from "../settings/AppearanceTab";
 import BillingTab from "../settings/BillingTab";
 import "../settings/SettingsTabs.css";
-import { supabase } from "../../lib/supabase";
 
 // ── Profile tab ─────────────────────────────────────────────────────────────
 function ProfileTab() {
@@ -23,44 +22,10 @@ function ProfileTab() {
   const [language, setLanguage] = useState("English (IN)");
   const [timezone, setTimezone] = useState("GMT+5:30 (IST)");
 
-  useEffect(() => {
-    async function loadProfile() {
-      const { data } = await supabase
-        .from("profiles")
-        .select("*")
-        .eq("id", "1")
-        .single();
-
-      if (data) {
-        const [firstName, ...rest] = (data.name || "").split(" ");
-        setProfile((p) => ({
-          ...p,
-          firstName,
-          lastName: rest.join(" "),
-          email: data.email || "",
-          phone: data.phone || "",
-          bio: data.bio || "",
-        }));
-      }
-    }
-
-    loadProfile();
-  }, []);
-
-  const handleSave = async () => {
-    const { error } = await supabase
-      .from("profiles")
-      .upsert({
-        id: "1",
-        name: `${profile.firstName} ${profile.lastName}`.trim(),
-        email: profile.email,
-        phone: profile.phone,
-        bio: profile.bio,
-        updated_at: new Date().toISOString(),
-      });
-
-    if (!error) setSaved(true);
-  };
+  
+const handleSave = () => {
+  setSaved(true);
+};
 
   return (
     <div className="tab-content fade-in">
