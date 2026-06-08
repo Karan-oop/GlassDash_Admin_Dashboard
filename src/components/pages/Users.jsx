@@ -1,17 +1,42 @@
 import React, { useState } from 'react';
+import { Clock, Star, UserPlus, Users as UsersIcon } from 'lucide-react';
 
 const userCards = [
-  { label: 'Total Users', value: '24,521', change: '+5%', positive: true, colorClass: 'tan',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+  {
+    label: 'Total Users',
+    value: '24,521',
+    change: '+5%',
+    positive: true,
+    icon: UsersIcon,
+    iconColor: '#10B981',
+    iconBg: 'rgba(16, 185, 129, 0.12)',
   },
-  { label: 'Active Now', value: '1,204', change: '+1.5%', positive: true, colorClass: 'tan',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+  {
+    label: 'Active Now',
+    value: '1,204',
+    change: '+1.5%',
+    positive: true,
+    icon: Clock,
+    iconColor: '#3B82F6',
+    iconBg: 'rgba(59, 130, 246, 0.12)',
   },
-  { label: 'New Today', value: '86', change: '-3.1%', positive: false, colorClass: 'red',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+  {
+    label: 'New Today',
+    value: '86',
+    change: '-3.1%',
+    positive: false,
+    icon: UserPlus,
+    iconColor: '#F59E0B',
+    iconBg: 'rgba(245, 158, 11, 0.12)',
   },
-  { label: 'Premium Users', value: '3,847', change: '+18.7%', positive: true, colorClass: 'tan',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg>
+  {
+    label: 'Premium Users',
+    value: '3,847',
+    change: '+18.7%',
+    positive: true,
+    icon: Star,
+    iconColor: '#8B5CF6',
+    iconBg: 'rgba(139, 92, 246, 0.12)',
   },
 ];
 
@@ -29,12 +54,11 @@ const usersData = [
 const statusClass = { Active: 'ust-active', Away: 'ust-away', Offline: 'ust-offline' };
 
 export default function Users() {
-  const [users, setUsers] = useState(usersData);
   const [search, setSearch] = useState('');
 
-  const filtered = users.filter(u =>
-    u.name.toLowerCase().includes(search.toLowerCase()) ||
-    u.email.toLowerCase().includes(search.toLowerCase())
+  const filtered = usersData.filter((user) =>
+    user.name.toLowerCase().includes(search.toLowerCase()) ||
+    user.email.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -46,22 +70,32 @@ export default function Users() {
       </div>
       <h1 className="pg-title">Users</h1>
 
-      {/* Cards */}
-      <div className="cards-grid pg-cards-anim">
-        {userCards.map((c, i) => (
-          <div key={c.label} className="glass-card dash-card" style={{ animationDelay: `${i * 0.07}s` }}>
-            <div className={`card-icon ${c.colorClass}`}>{c.icon}</div>
-            <div className="card-label">{c.label}</div>
-            <div className="card-value">{c.value}</div>
-            <span className={`card-change ${c.positive ? 'positive' : 'negative'}`}>
-              {c.positive ? '▲' : '▼'} {c.change}
-            </span>
-            <div className="card-glow" />
-          </div>
-        ))}
+      <div className="premium-cards-grid">
+        {userCards.map((card) => {
+          const IconComponent = card.icon;
+
+          return (
+            <div key={card.label} className="premium-card">
+              <div className="premium-card-content">
+                <div className="premium-card-text">
+                  <span className="premium-card-label">{card.label}</span>
+                  <span className="premium-card-value">{card.value}</span>
+                  <span className={`premium-card-trend ${card.positive ? 'trend-up' : 'trend-down'}`}>
+                    <span className="trend-arrow">{card.positive ? '\u2191' : '\u2193'}</span>
+                    {' '}{card.change}{' '}
+                    <span className="trend-separator">·</span>
+                    {' '}Last 30 days
+                  </span>
+                </div>
+                <div className="premium-card-icon-wrap" style={{ background: card.iconBg }}>
+                  <IconComponent size={28} color={card.iconColor} strokeWidth={1.8} />
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
-      {/* Table card */}
       <div className="glass-card transactions-card">
         <div className="transactions-header" style={{ flexWrap: 'wrap', gap: '12px' }}>
           <div>
@@ -69,10 +103,9 @@ export default function Users() {
             <div className="section-sub">Manage your user base</div>
           </div>
           <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
-            {/* Search */}
             <div className="pg-table-search">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="text" placeholder="Search users..." value={search} onChange={e => setSearch(e.target.value)} />
+              <input type="text" placeholder="Search users..." value={search} onChange={(event) => setSearch(event.target.value)} />
             </div>
             <button className="pg-btn-primary">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
@@ -95,26 +128,26 @@ export default function Users() {
               </tr>
             </thead>
             <tbody>
-              {filtered.map((u, i) => (
-                <tr key={i}>
+              {filtered.map((user) => (
+                <tr key={user.email}>
                   <td>
                     <div className="customer-cell">
-                      <div className="cust-avatar" style={{ background: u.color }}>{u.initials}</div>
+                      <div className="cust-avatar" style={{ background: user.color }}>{user.initials}</div>
                       <div>
-                        <div className="cust-name">{u.name}</div>
-                        <div className="cust-email">{u.email}</div>
+                        <div className="cust-name">{user.name}</div>
+                        <div className="cust-email">{user.email}</div>
                       </div>
                     </div>
                   </td>
-                  <td style={{ color: 'var(--text-muted)', fontSize: '0.83rem' }}>{u.role}</td>
+                  <td style={{ color: 'var(--text-muted)', fontSize: '0.83rem' }}>{user.role}</td>
                   <td>
-                    <span className={`pg-status-badge ${statusClass[u.status]}`}>
+                    <span className={`pg-status-badge ${statusClass[user.status]}`}>
                       <span className="pg-status-dot" />
-                      {u.status}
+                      {user.status}
                     </span>
                   </td>
-                  <td style={{ color: 'var(--text-muted)', fontSize: '0.83rem' }}>{u.joined}</td>
-                  <td style={{ color: 'var(--text-muted)', fontSize: '0.83rem' }}>{u.lastActive}</td>
+                  <td style={{ color: 'var(--text-muted)', fontSize: '0.83rem' }}>{user.joined}</td>
+                  <td style={{ color: 'var(--text-muted)', fontSize: '0.83rem' }}>{user.lastActive}</td>
                   <td>
                     <button className="pg-edit-btn">Edit</button>
                   </td>

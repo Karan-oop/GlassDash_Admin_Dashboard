@@ -1048,6 +1048,7 @@ body.light-theme .view-all-btn:hover {
 }
 
 .premium-card-label {
+  font-family: var(--font-body);
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1056,7 +1057,7 @@ body.light-theme .view-all-btn:hover {
 }
 
 .premium-card-value {
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
