@@ -51,8 +51,7 @@ body.light-theme {
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
-  background: linear-gradient(135deg, #07010d 0%, #0d0208 30%, #160310 60%, #1a0508 100%);
-  min-height: 100vh;
+  background: linear-gradient(135deg, #07010d 0%, #0d0208 30%, #160310 60%, #1a0508 100%); 
   color: var(--text);
   overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease, background 0.5s ease;
@@ -61,7 +60,6 @@ body {
 body.dark-theme {
   background: linear-gradient(135deg, #07010d 0%, #0d0208 30%, #160310 60%, #1a0508 100%);
 }
-
 body.light-theme {
   background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 30%, #f0ebeb 60%, #ebebeb 100%);
   color: var(--text);
@@ -135,8 +133,8 @@ body.light-theme ::-webkit-scrollbar-thumb {
   transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color 0.5s ease, color 0.5s ease;
 }
 .glass-card:hover {
-  background: var(--glass-hover);
-  box-shadow: var(--shadow), 0 0 30px rgba(181,173,137,0.18);
+    background: var(--glass-hover);
+    box-shadow: var(--shadow), 0 0 30px rgba(181,173,137,0.18);
 }
 
 /* ─── SIDEBAR ─── */
@@ -986,42 +984,159 @@ body.light-theme .view-all-btn:hover {
   .profile-btn { padding: 5px; border-radius: 50%; }
 }
 
-/* ─── DASHBOARD CARDS ─── */
-.cards-grid {
+/* ─── PREMIUM DASHBOARD CARDS (Stripe-style) ─── */
+.premium-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; margin-bottom: 24px;
+  gap: 16px;
+  margin-bottom: 24px;
 }
-.dash-card {
-  padding: 22px; position: relative; overflow: hidden;
-  animation: fadeInUp 0.5s ease both; cursor: default;
-}
-.dash-card:nth-child(1) { animation-delay: 0.05s; }
-.dash-card:nth-child(2) { animation-delay: 0.1s; }
-.dash-card:nth-child(3) { animation-delay: 0.15s; }
-.dash-card:nth-child(4) { animation-delay: 0.2s; }
-.dash-card:hover { transform: translateY(-4px) scale(1.01); }
 
-.card-icon {
-  width: 44px; height: 44px; border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 16px; font-size: 1.2rem;
+.premium-card {
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), var(--glow-tan);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease both;
 }
-.card-icon.red { background: rgba(110,1,26,0.3); border: 1px solid rgba(110,1,26,0.4); color: #e85a75; }
-.card-icon.tan { background: rgba(181,173,137,0.12); border: 1px solid rgba(181,173,137,0.2); color: var(--tan); }
-.card-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 8px; }
-.card-value { font-family: var(--font-title); font-size: 1.85rem; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: 10px; }
-.card-change {
-  display: inline-flex; align-items: center; gap: 4px;
-  font-size: 0.75rem; font-weight: 600; padding: 3px 9px; border-radius: 50px;
+
+.premium-card:nth-child(1) { animation-delay: 0.05s; }
+.premium-card:nth-child(2) { animation-delay: 0.1s; }
+.premium-card:nth-child(3) { animation-delay: 0.15s; }
+.premium-card:nth-child(4) { animation-delay: 0.2s; }
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 0 30px rgba(181, 173, 137, 0.12);
+  background: var(--glass-hover);
+  border-color: rgba(255, 255, 255, 0.18);
 }
-.card-change.positive { background: rgba(181,173,137,0.12); color: var(--tan-light); }
-.card-change.negative { background: rgba(110,1,26,0.2); color: #e85a75; }
-.card-glow {
-  position: absolute; bottom: -20px; right: -20px;
-  width: 100px; height: 100px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(181,173,137,0.06) 0%, transparent 70%);
+
+.premium-card::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(181, 173, 137, 0.05) 0%, transparent 70%);
   pointer-events: none;
+}
+
+.premium-card-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.premium-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.premium-card-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.premium-card-value {
+  font-family: var(--font-body);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.premium-card-trend {
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 1;
+}
+
+.premium-card-trend.trend-up {
+  color: #10B981;
+}
+
+.premium-card-trend.trend-down {
+  color: #EF4444;
+}
+
+.trend-arrow {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.trend-separator {
+  color: var(--text-dim);
+  margin: 0 2px;
+}
+
+.premium-card-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.premium-card:hover .premium-card-icon-wrap {
+  transform: scale(1.05);
+}
+
+/* Light theme overrides for premium cards */
+body.light-theme .premium-card {
+  border-color: rgba(110, 1, 26, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-theme .premium-card:hover {
+  border-color: rgba(110, 1, 26, 0.18);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive: 4 → 2 → 1 */
+@media (max-width: 1100px) {
+  .premium-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .premium-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .premium-card-value {
+    font-size: 28px;
+  }
+  .premium-card-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
 }
 
 /* ─── CHART SECTION ─── */

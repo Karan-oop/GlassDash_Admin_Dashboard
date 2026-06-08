@@ -1,4 +1,5 @@
 import React from 'react';
+import { DollarSign, Users, ShoppingCart, TrendingUp } from 'lucide-react';
 
 const cards = [
   {
@@ -6,67 +7,70 @@ const cards = [
     value: '$84,254',
     change: '+12.5%',
     positive: true,
-    iconColor: 'tan',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-      </svg>
-    ),
+    icon: DollarSign,
+    gradient: 'from-emerald-500/20 to-teal-500/10',
+    iconColor: '#10B981',
+    iconBg: 'rgba(16, 185, 129, 0.12)',
   },
   {
     label: 'Active Users',
     value: '14,823',
     change: '+8.2%',
     positive: true,
-    iconColor: 'tan',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>
-    ),
+    icon: Users,
+    gradient: 'from-blue-500/20 to-indigo-500/10',
+    iconColor: '#3B82F6',
+    iconBg: 'rgba(59, 130, 246, 0.12)',
   },
   {
     label: 'Total Orders',
     value: '3,947',
     change: '-5.1%',
     positive: false,
-    iconColor: 'red',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-      </svg>
-    ),
+    icon: ShoppingCart,
+    gradient: 'from-orange-500/20 to-red-500/10',
+    iconColor: '#F59E0B',
+    iconBg: 'rgba(245, 158, 11, 0.12)',
   },
   {
     label: 'Conversion Rate',
     value: '3.24%',
     change: '+1.4%',
     positive: true,
-    iconColor: 'tan',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/>
-      </svg>
-    ),
+    icon: TrendingUp,
+    gradient: 'from-violet-500/20 to-purple-500/10',
+    iconColor: '#8B5CF6',
+    iconBg: 'rgba(139, 92, 246, 0.12)',
   },
 ];
 
 export default function DashboardCards() {
   return (
-    <div className="cards-grid">
-      {cards.map((card) => (
-        <div key={card.label} className="glass-card dash-card">
-          <div className={`card-icon ${card.iconColor}`}>{card.icon}</div>
-          <div className="card-label">{card.label}</div>
-          <div className="card-value">{card.value}</div>
-          <span className={`card-change ${card.positive ? 'positive' : 'negative'}`}>
-            {card.positive ? '▲' : '▼'} {card.change}
-          </span>
-          <div className="card-glow" />
-        </div>
-      ))}
+    <div className="premium-cards-grid">
+      {cards.map((card) => {
+        const IconComponent = card.icon;
+        return (
+          <div key={card.label} className="premium-card">
+            <div className="premium-card-content">
+              <div className="premium-card-text">
+                <span className="premium-card-label">{card.label}</span>
+                <span className="premium-card-value">{card.value}</span>
+                <span
+                  className={`premium-card-trend ${card.positive ? 'trend-up' : 'trend-down'}`}
+                >
+                  <span className="trend-arrow">{card.positive ? '\u2191' : '\u2193'}</span>
+                  {' '}{card.change}{' '}
+                  <span className="trend-separator">·</span>
+                  {' '}Last 30 days
+                </span>
+              </div>
+              <div className="premium-card-icon-wrap" style={{ background: card.iconBg }}>
+                <IconComponent size={28} color={card.iconColor} strokeWidth={1.8} />
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

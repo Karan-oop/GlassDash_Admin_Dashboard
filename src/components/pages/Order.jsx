@@ -1,5 +1,7 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Order.css";
+import { orderData } from "./OrderData";
 
 const ORDER_STATUSES = [
   "All",
@@ -11,101 +13,6 @@ const ORDER_STATUSES = [
   "Cancelled",
   "Returned",
   "Refunded",
-];
-
-const PAYMENT_STATUSES = ["Paid", "Pending", "Refunded"];
-
-const initialOrders = [
-  {
-    id: "GD-2048",
-    productName: "Premium Leather Jacket",
-    orderDate: "2026-06-01",
-    deliveryDate: "2026-06-07",
-    amount: 129.99,
-    paymentStatus: "Paid",
-    orderStatus: "Delivered",
-  },
-  {
-    id: "GD-2049",
-    productName: "Classic White Sneakers",
-    orderDate: "2026-06-02",
-    deliveryDate: "2026-06-09",
-    amount: 89.5,
-    paymentStatus: "Paid",
-    orderStatus: "Shipped",
-  },
-  {
-    id: "GD-2050",
-    productName: "Smart Watch Series X",
-    orderDate: "2026-06-03",
-    deliveryDate: "2026-06-12",
-    amount: 249.0,
-    paymentStatus: "Pending",
-    orderStatus: "Processing",
-  },
-  {
-    id: "GD-2051",
-    productName: "Noise Cancelling Headphones",
-    orderDate: "2026-05-29",
-    deliveryDate: "2026-06-04",
-    amount: 189.99,
-    paymentStatus: "Paid",
-    orderStatus: "Out for Delivery",
-  },
-  {
-    id: "GD-2052",
-    productName: "Travel Backpack Pro",
-    orderDate: "2026-05-28",
-    deliveryDate: "2026-06-05",
-    amount: 59.99,
-    paymentStatus: "Paid",
-    orderStatus: "Pending",
-  },
-  {
-    id: "GD-2053",
-    productName: "Wireless Mechanical Keyboard",
-    orderDate: "2026-05-24",
-    deliveryDate: "2026-05-31",
-    amount: 149.0,
-    paymentStatus: "Refunded",
-    orderStatus: "Returned",
-  },
-  {
-    id: "GD-2054",
-    productName: "Smart Home Speaker",
-    orderDate: "2026-05-21",
-    deliveryDate: "2026-05-28",
-    amount: 77.25,
-    paymentStatus: "Paid",
-    orderStatus: "Cancelled",
-  },
-  {
-    id: "GD-2055",
-    productName: "Gaming Mouse Elite",
-    orderDate: "2026-05-19",
-    deliveryDate: "2026-05-27",
-    amount: 45.0,
-    paymentStatus: "Paid",
-    orderStatus: "Delivered",
-  },
-  {
-    id: "GD-2056",
-    productName: "Bluetooth Speaker Mini",
-    orderDate: "2026-06-04",
-    deliveryDate: "2026-06-10",
-    amount: 35.5,
-    paymentStatus: "Pending",
-    orderStatus: "Processing",
-  },
-  {
-    id: "GD-2057",
-    productName: "Cotton Hoodie Set",
-    orderDate: "2026-06-05",
-    deliveryDate: "2026-06-13",
-    amount: 72.0,
-    paymentStatus: "Paid",
-    orderStatus: "Pending",
-  },
 ];
 
 const statsConfig = [
@@ -213,7 +120,8 @@ function ActionIcon({ type }) {
 }
 
 export default function Order() {
-  const [orders, setOrders] = useState(initialOrders);
+  const navigate = useNavigate();
+  const [orders, setOrders] = useState(orderData);
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
   const [sortBy, setSortBy] = useState("newest");
@@ -282,7 +190,6 @@ export default function Order() {
       )
     );
     setCancelTarget(null);
-    setActiveOrder(null);
     showToast(`Order ${cancelTarget.id} cancelled`);
   };
 
@@ -412,7 +319,7 @@ export default function Order() {
                 <th>Amount</th>
                 <th>Payment</th>
                 <th>Status</th>
-                <th>Actions</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -435,7 +342,7 @@ export default function Order() {
                   </td>
                   <td>
                     <div className="order-actions">
- <button type="button" className="order-mini-btn" onClick={() => handleReorder(order)}>
+                      <button type="button" className="order-mini-btn" onClick={() => handleReorder(order)}>
                         <ActionIcon type="reorder" />
                         Reorder
                       </button>
@@ -445,6 +352,16 @@ export default function Order() {
                       </button>
                       <button type="button" className="order-mini-btn" onClick={() => handleTrackOrder(order)}>
                         Track Order
+                      </button>
+                      <button
+                        type="button"
+                        className="order-mini-btn order-view-action"
+                        title="View Order"
+                        aria-label={`View order ${order.id}`}
+                        onClick={() => navigate(`/user/orders/${order.id}`)}
+                      >
+                        <ActionIcon type="view" />
+                        View
                       </button>
                     </div>
                   </td>

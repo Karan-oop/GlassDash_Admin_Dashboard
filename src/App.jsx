@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './styles/style.css';
 
@@ -24,6 +24,7 @@ import User from './components/pages/User';
 import UserList from './components/pages/UserList';
 import Profile from './components/pages/Profile';
 import Order from './components/pages/Order';
+import OrderDetail from './components/pages/OrderDetail';
 import BlogList from './components/pages/BlogList';
 import BlogDetail from './components/pages/BlogDetail';
 import BlogCreate from './components/pages/BlogCreate';
@@ -86,6 +87,7 @@ function AppShell({ isMobile, sidebarOpen, openSidebar, closeSidebar }) {
             <Route path="/user/profile" element={<Profile />} />
             <Route path="/user/profile/:userId" element={<Profile />} />
             <Route path="/user/orders" element={<Order />} />
+            <Route path="/user/orders/:orderId" element={<OrderDetail />} />
             <Route path="/blogs" element={<BlogList />} />
             <Route path="/blogs/:id" element={<BlogDetail />} />
             <Route path="/blogs/create" element={<BlogCreate />} />
@@ -127,9 +129,6 @@ function AppRoutes() {
         setSidebarOpen(false);
       }
     };
-
-    setIsMobile(mediaQuery.matches);
-    setSidebarOpen(!mediaQuery.matches);
 
     if (typeof mediaQuery.addEventListener === 'function') {
       mediaQuery.addEventListener('change', handleViewportChange);

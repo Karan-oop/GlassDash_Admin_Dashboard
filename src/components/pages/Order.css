@@ -319,6 +319,16 @@
   color: #ffd3da;
 }
 
+.order-view-action {
+  border-color: rgba(100, 180, 255, 0.38);
+  color: #9dd7ff;
+}
+
+.order-view-action:hover:not(:disabled) {
+  border-color: rgba(100, 180, 255, 0.72);
+  color: #c9ecff;
+}
+
 .order-mini-btn:disabled {
   opacity: 0.45;
   cursor: not-allowed;
@@ -544,6 +554,35 @@
   background: rgba(8, 2, 6, 0.94);
   box-shadow: var(--shadow);
   animation: fadeInUp 0.22s ease both;
+}
+
+.order-detail-page .profile-hero {
+  align-items: center;
+}
+
+.order-detail-icon-frame {
+  border-radius: 28px;
+}
+
+.order-detail-icon {
+  border-radius: 22px;
+}
+
+.order-detail-icon svg {
+  width: 72px;
+  height: 72px;
+}
+
+.order-detail-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.order-detail-page textarea.profile-input {
+  min-height: 110px;
+  resize: vertical;
 }
 
 @media (max-width: 1200px) {
