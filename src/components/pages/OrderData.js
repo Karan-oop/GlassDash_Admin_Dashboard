@@ -11,10 +11,11 @@ export const orderData = [
     deliveryDate: "2026-06-07",
     shippingMethod: "Express Delivery",
     paymentMethod: "Credit Card",
-    amount: 129.99,
+    amount: 199.99,
     paymentStatus: "Paid",
     orderStatus: "Delivered",
-    shippingAddress: "248 A Block, Street No 3, Laxmi Nagar, East Delhi, Delhi, 110092",
+    shippingAddress:
+      "248 A Block, Street No 3, Laxmi Nagar, East Delhi, Delhi, 110092",
     trackingId: "TRK-GD2048-91",
     notes: "Delivered successfully to the customer's default address.",
   },
@@ -33,7 +34,8 @@ export const orderData = [
     amount: 89.5,
     paymentStatus: "Paid",
     orderStatus: "Shipped",
-    shippingAddress: "1202, Sea Crest Towers, Linking Road, Bandra West, Mumbai, 400050",
+    shippingAddress:
+      "1202, Sea Crest Towers, Linking Road, Bandra West, Mumbai, 400050",
     trackingId: "TRK-GD2049-42",
     notes: "Package has left the fulfilment center.",
   },
@@ -47,14 +49,15 @@ export const orderData = [
     quantity: 1,
     orderDate: "2026-06-03",
     deliveryDate: "2026-06-12",
-    shippingMethod: "Standard Delivery",
-    paymentMethod: "Cash on Delivery",
+    shippingMethod: "Express Delivery",
+    paymentMethod: "Debit Card",
     amount: 249.0,
-    paymentStatus: "Pending",
-    orderStatus: "Processing",
-    shippingAddress: "45, Pink City Residency, MI Road, Ashok Nagar, Jaipur, 302001",
+    paymentStatus: "Paid",
+    orderStatus: "Out for Delivery",
+    shippingAddress:
+      "45, Pink City Residency, MI Road, Ashok Nagar, Jaipur, 302001",
     trackingId: "TRK-GD2050-77",
-    notes: "Payment will be collected on delivery.",
+    notes: "Delivery expected today.",
   },
   {
     id: "GD-2051",
@@ -71,7 +74,8 @@ export const orderData = [
     amount: 189.99,
     paymentStatus: "Paid",
     orderStatus: "Out for Delivery",
-    shippingAddress: "B-704, Riverdale Heights, Baner Road, Baner, Pune, 411045",
+    shippingAddress:
+      "B-704, Riverdale Heights, Baner Road, Baner, Pune, 411045",
     trackingId: "TRK-GD2051-65",
     notes: "Courier is attempting delivery today.",
   },
@@ -90,7 +94,8 @@ export const orderData = [
     amount: 59.99,
     paymentStatus: "Paid",
     orderStatus: "Pending",
-    shippingAddress: "91, Rosewood Enclave, Madhya Marg, Sector 9, Chandigarh, 160009",
+    shippingAddress:
+      "91, Rosewood Enclave, Madhya Marg, Sector 9, Chandigarh, 160009",
     trackingId: "TRK-GD2052-18",
     notes: "Awaiting warehouse confirmation.",
   },
@@ -109,7 +114,8 @@ export const orderData = [
     amount: 149.0,
     paymentStatus: "Refunded",
     orderStatus: "Returned",
-    shippingAddress: "8-2-293, Lotus Court, Road No. 12, Banjara Hills, Hyderabad, 500034",
+    shippingAddress:
+      "8-2-293, Lotus Court, Road No. 12, Banjara Hills, Hyderabad, 500034",
     trackingId: "TRK-GD2053-33",
     notes: "Customer returned the product and refund has been completed.",
   },
@@ -147,7 +153,8 @@ export const orderData = [
     amount: 45.0,
     paymentStatus: "Paid",
     orderStatus: "Delivered",
-    shippingAddress: "17, Awadh Apartments, Hazratganj Road, Hazratganj, Lucknow, 226001",
+    shippingAddress:
+      "17, Awadh Apartments, Hazratganj Road, Hazratganj, Lucknow, 226001",
     trackingId: "TRK-GD2055-54",
     notes: "Delivered and closed.",
   },
@@ -166,7 +173,8 @@ export const orderData = [
     amount: 35.5,
     paymentStatus: "Pending",
     orderStatus: "Processing",
-    shippingAddress: "304, Saffron Heights, CG Road, Navrangpura, Ahmedabad, 380009",
+    shippingAddress:
+      "304, Saffron Heights, CG Road, Navrangpura, Ahmedabad, 380009",
     trackingId: "TRK-GD2056-88",
     notes: "Order is being packed.",
   },
@@ -184,13 +192,17 @@ export const orderData = [
     paymentMethod: "UPI",
     amount: 72.0,
     paymentStatus: "Paid",
-    orderStatus: "Pending",
-    shippingAddress: "5A, Victoria Residency, Park Street, Taltala, Kolkata, 700016",
+    orderStatus: "Shipped",
+    shippingAddress:
+      "5A, Victoria Residency, Park Street, Taltala, Kolkata, 700016",
     trackingId: "TRK-GD2057-26",
-    notes: "Awaiting dispatch slot.",
+    notes: "Awaiting delivery slot.",
   },
 ];
 
 export function getOrderById(orderId) {
-  return orderData.find((order) => String(order.id) === String(orderId)) || orderData[0];
+  return (
+    orderData.find((order) => String(order.id) === String(orderId)) ||
+    orderData[0]
+  );
 }

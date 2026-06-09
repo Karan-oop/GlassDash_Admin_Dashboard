@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 /**
  * AddressInformation Component
  * 
- * Adds a new address section to the User Profile page with validation and responsive layout.
- * Follows the specific requirements for Indian address formatting and validation.
+ * Adds a new address section to the User Profile page with validation and responsive layout....
+ * Follows the specific requirements for Indian address formatting and validation...
  */
 
 const INDIAN_STATES = [
