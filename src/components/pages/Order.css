@@ -1617,7 +1617,8 @@ body.light-theme .order-toast {
 
 .invoice-paper-modal {
   width: min(840px, 100%);
-  max-height: min(90vh, 880px);
+  max-height: min(86vh, 820px); /* Centered vertical height constraint */
+  margin: auto;                /* Vertically and horizontally center in flex container */
   padding: 40px;
   background: linear-gradient(
     135deg,
@@ -1632,7 +1633,40 @@ body.light-theme .order-toast {
   gap: 24px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   position: relative;
+    transition: transform var(--transition), box-shadow var(--transition); /* Exclude
+     background to prevent transparency hover flash */
 }
+
+/* Light Theme Override */
+body.light-theme .invoice-paper-modal {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 245, 246, 0.99) 100%
+  );
+  border: 1px solid rgba(110, 1, 26, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+  /* Hover Override to prevent transparency */
+  .invoice-paper-modal.glass-card:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(20, 10, 15, 0.96) 0%,
+      rgba(10, 5, 8, 0.98) 100%
+    ) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Light Theme Hover Override to prevent transparency */
+  body.light-theme .invoice-paper-modal.glass-card:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(248, 245, 246, 0.99) 100%
+    ) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
 
 .invoice-modal-header {
   display: flex;
