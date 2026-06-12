@@ -192,7 +192,25 @@ src/
 
 ## 📸 Screenshots
 
+
+### Authentication System (LogIn Page)
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 025838" src="https://github.com/user-attachments/assets/423a78a0-ef5a-47fe-acd3-1a5d51c02c13" />
+
+
+- Secure Login Interface
+- Modern Glassmorphism Design
+- Email & Password Validation
+- Responsive Authentication Layout
+- User-Friendly Form Experience
+- Clean Error Handling
+- Remember Me Functionality
+- Seamless Dashboard Access
+
 ### Dashboard Overview
+
+<img width="1919" height="1079" alt="Screenshot 2026-06-12 025728" src="https://github.com/user-attachments/assets/88844821-9fd7-411c-9a13-d5c8ff6b646e" />
+
 
 - Revenue Analytics
 - Activity Monitoring
@@ -202,6 +220,9 @@ src/
 
 ### Analytics Dashboard
 
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 025743" src="https://github.com/user-attachments/assets/c924287e-4675-4c7d-ba0b-1bef620b8639" />
+
+
 - Visitor Statistics
 - Device Distribution
 - Browser Insights
@@ -209,11 +230,17 @@ src/
 
 ### User Management
 
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 025748" src="https://github.com/user-attachments/assets/df5d811f-12fe-42aa-b3c9-78c17fc6ba71" />
+
+
 - User Directory
 - Search & Filtering
 - User Status Monitoring
 
 ### Product Management
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 025802" src="https://github.com/user-attachments/assets/5ce4242b-2a39-41d7-9c1b-1e4e7a957886" />
+
 
 - Product Creation
 - Inventory Management
@@ -221,11 +248,21 @@ src/
 
 ### Coupon System
 
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 025812" src="https://github.com/user-attachments/assets/0b51bf32-4dd8-40fc-9f68-2984115a2fd7" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 025825" src="https://github.com/user-attachments/assets/e50e8607-42e8-4e43-856d-ac5cd41880a3" />
+
+
+
 - Discount Generation
 - Campaign Management
 - Coupon Tracking
 
 ### Settings
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 025829" src="https://github.com/user-attachments/assets/c098567b-6ae7-4a32-b01f-0667260e25d5" />
+
 
 - Profile Management
 - Preferences
