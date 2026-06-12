@@ -26,9 +26,9 @@ The project focuses on creating a professional dashboard experience similar to t
 
 ---
 
-## ✨ Key Features
+##  Key Features ✨
 
-### 📊 Dashboard Overview
+###  Dashboard Overview
 
 <img width="1919" height="1079" alt="Screenshot 2026-06-12 025728" src="https://github.com/user-attachments/assets/f99097c1-1f65-4e77-b832-c4784eddd45b" />
 
@@ -46,7 +46,7 @@ Monitor important business metrics in one place:
 
 ---
 
-### 📈 Analytics Dashboard
+### Analytics Dashboard
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 025743" src="https://github.com/user-attachments/assets/b75b015b-4ddb-426d-870f-6811105a09b2" />
 
@@ -64,7 +64,7 @@ Comprehensive analytics section with:
 
 ---
 
-### 👥 Users Management
+### Users Management
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 025748" src="https://github.com/user-attachments/assets/7f938a7c-0ce7-45b9-857f-3029e76aa7b6" />
 
@@ -80,7 +80,7 @@ Manage users efficiently with:
 
 ---
 
-### 🛍 Product Management
+### Product Management
 
 Complete product administration module:
 
@@ -96,7 +96,7 @@ Complete product administration module:
 
 ---
 
-### 🎟 Coupon Management
+### Coupon Management
 
 Create and manage promotional offers:
 
@@ -110,7 +110,7 @@ Create and manage promotional offers:
 
 ---
 
-### ⚙ Settings Panel
+### Settings Panel
 
 Personalized account management:
 
@@ -124,7 +124,7 @@ Personalized account management:
 
 ---
 
-## 🎨 UI/UX Highlights
+## UI/UX Highlights 🎨
 
 - Premium Dark Theme
 - Modern Glassmorphism Elements
