@@ -142,38 +142,11 @@ Personalized account management:
 
 | Category | Technologies |
 |-----------|-------------|
-| **Frontend** | React.js, JavaScript (ES6+), HTML5, CSS3 |
+| **Frontend** | React.js, JavaScript (ES6+), HTML5, CSS3, Figma |
 | **Development Tools** | Vite, ESLint, Git, GitHub |
 | **Architecture** | Component-Based Architecture, Reusable Components |
 | **Design** | Responsive Web Design, Modern Dashboard Layouts, UI/UX Design Principles |
 | **React Concepts** | Dynamic Rendering, State Management |
-
-
-## 🛠 Technology Stack
-
-### Frontend
-
-- React.js
-- JavaScript (ES6+)
-- HTML5
-- CSS3
-
-### Development Tools
-
-- Vite
-- ESLint
-- Git
-- GitHub
-
-### Concepts Implemented
-
-- Component-Based Architecture
-- Responsive Web Design
-- Dynamic Rendering
-- Reusable Components
-- State Management
-- Modern Dashboard Layouts
-- UI/UX Design Principles
 
 ---
 
@@ -213,7 +186,6 @@ src/
 ### Authentication System (LogIn Page)
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 025838" src="https://github.com/user-attachments/assets/423a78a0-ef5a-47fe-acd3-1a5d51c02c13" />
-
 
 - Secure Login Interface
 - Modern Glassmorphism Design
