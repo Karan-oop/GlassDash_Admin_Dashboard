@@ -174,7 +174,7 @@ src/
 
 ---
 
-## Screenshots Gallery
+## Screenshots Gallery:
 
 ### Authentication System (LogIn Page)
 
@@ -198,7 +198,7 @@ src/
 - Traffic Sources
 - Project Progress
 
-  ---
+---
 
 ### Analytics Dashboard
 
@@ -209,7 +209,7 @@ src/
 - Browser Insights
 - Geographic Analytics
 
-  ---
+---
 
 ### Users Management
 
@@ -225,7 +225,8 @@ src/
 
 Listed Products
 
-<img width="1920" height="1080" alt="Screenshot 2026-06-12 025802" src="https://github.com/user-attachments/assets/5ce4242b-2a39-41d7-9c1b-1e4e7a957886" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 053025" src="https://github.com/user-attachments/assets/3ecb7f4a-7e5a-43fc-8164-86e0f78bfedd" />
+
 
 - Product Search & Management
 - Product Editing Functionality
@@ -243,6 +244,28 @@ Create New Product
 - Pricing Configuration
 
 ---
+
+### BLog Management
+
+Listed Blogs
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 053208" src="https://github.com/user-attachments/assets/e2bb4869-6a70-4c0d-bc46-75314458deef" />
+
+- View All Published Blogs
+- Blog Search & Management
+- Content Organization
+- Blog Status Monitoring
+
+---
+
+Create New Blog
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 053355" src="https://github.com/user-attachments/assets/7cfc436d-b3cf-47db-9a72-a29f523cb6e7" />
+
+- Rich Blog Creation Interface
+- Content Publishing Workflow
+- Blog Metadata Management
+- Draft & Publishing Support
 
 ### Coupon System
 
