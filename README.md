@@ -274,6 +274,8 @@ src/
 - Role Management
 - Activity Tracking
 
+---
+
 2. 👤 User Profile
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 034306" src="https://github.com/user-attachments/assets/2b8a610a-d8bf-487d-bb73-daf849589851" />
@@ -284,6 +286,8 @@ src/
 - Profile Image Display
 - Account Overview
 - User-Specific Information
+
+---
 
 3. 📦 Orders Management
 
@@ -301,6 +305,7 @@ src/
 - Prepaid & Due Payments
 - Purchase History Overview
 
+---
 
 ### Settings
 
