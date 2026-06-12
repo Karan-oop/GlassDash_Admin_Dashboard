@@ -324,7 +324,7 @@ src/
 
 ---
 
-### 3.2 Order Details :
+### 3.2 Orders Details:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 034325" src="https://github.com/user-attachments/assets/a9affe59-9791-4761-9f43-5fbaa87d6df9" />
 
@@ -336,7 +336,7 @@ src/
 
 ### Settings
 
-### 1. Profile :
+### 1. Profile:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 060121" src="https://github.com/user-attachments/assets/aa660333-7342-4274-8e88-47b3d7258e04" />
 
@@ -346,7 +346,7 @@ src/
 
 ---
 
-### 2. Security :
+### 2. Security:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 060136" src="https://github.com/user-attachments/assets/afdf53a8-3536-499f-a2b3-b91c3e345224" />
 
@@ -356,7 +356,7 @@ src/
 
 ---
 
-### 3. Notifications :
+### 3. Notifications:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 060142" src="https://github.com/user-attachments/assets/b92aee5f-477b-4b82-b7ae-4c3167c4f67f" />
 
@@ -364,7 +364,7 @@ src/
 - Alert Management
 - Communication Settings
 
-### 4. Appearance :
+### 4. Appearance:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 060145" src="https://github.com/user-attachments/assets/b4ca9615-72bd-4698-9aec-439ee3a57165" />
 
