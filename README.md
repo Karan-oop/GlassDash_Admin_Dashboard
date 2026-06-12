@@ -409,11 +409,11 @@ This project helped me improve my understanding of:
 
 ---
 
-## Developer </>
+## Developer </> bx bxl-git
 
 ### Karan Chandra Kothari
 
- Frontend Developer </>
+ Frontend Developer 
 
 - GitHub: https://github.com/Karan-oop
 - LinkedIn: https://www.linkedin.com/in/karan-chandra-kothari-a36a2b382
