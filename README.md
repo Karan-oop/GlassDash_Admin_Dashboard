@@ -259,6 +259,49 @@ src/
 - Campaign Management
 - Coupon Tracking
 
+---
+
+### 👥 User Management
+
+1. 📋 List of All Users
+
+<img width="1919" height="1079" alt="Screenshot 2026-06-12 034249" src="https://github.com/user-attachments/assets/9869e522-058e-4d5f-8bb4-200bb73ca1d6" />
+
+
+- Complete User Directory
+- Search & Filtering Functionality
+- User Status Monitoring
+- Role Management
+- Activity Tracking
+
+2. 👤 User Profile
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 034306" src="https://github.com/user-attachments/assets/2b8a610a-d8bf-487d-bb73-daf849589851" />
+
+
+- Profile Information
+- Personal Details Management
+- Profile Image Display
+- Account Overview
+- User-Specific Information
+
+3. 📦 Orders Management
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 034310" src="https://github.com/user-attachments/assets/50d93592-c78e-4ba3-a5c7-fe709ababccd" />
+
+---
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 034325" src="https://github.com/user-attachments/assets/a9affe59-9791-4761-9f43-5fbaa87d6df9" />
+
+
+- Customer Orders Tracking
+- Order Status Monitoring
+- Delivered & Pending Orders
+- Payment Status Tracking
+- Prepaid & Due Payments
+- Purchase History Overview
+
+
 ### Settings
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 025829" src="https://github.com/user-attachments/assets/c098567b-6ae7-4a32-b01f-0667260e25d5" />
