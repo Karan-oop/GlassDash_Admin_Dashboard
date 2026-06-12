@@ -292,92 +292,93 @@ src/
 
 ### User Management
 
-1. 📋 List of All Users
+### 1. List of All Users:
 
 <img width="1919" height="1079" alt="Screenshot 2026-06-12 034249" src="https://github.com/user-attachments/assets/9869e522-058e-4d5f-8bb4-200bb73ca1d6" />
 
-
 - Complete User Directory
-- Search & Filtering Functionality
 - User Status Monitoring
-- Role Management
 - Activity Tracking
 
 ---
 
-2. 👤 User Profile
+### 2. User Profile:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 034306" src="https://github.com/user-attachments/assets/2b8a610a-d8bf-487d-bb73-daf849589851" />
 
-
 - Profile Information
 - Personal Details Management
-- Profile Image Display
-- Account Overview
 - User-Specific Information
 
 ---
 
-3. 📦 Orders Management
+ ### 3. Orders Management:
+
+### 3.1 List Of All Orders:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 034310" src="https://github.com/user-attachments/assets/50d93592-c78e-4ba3-a5c7-fe709ababccd" />
 
+- Customer Orders Tracking
+- List Of All Orders
+- Status Monitoring
+
 ---
+
+### 3.2 Order Details :
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 034325" src="https://github.com/user-attachments/assets/a9affe59-9791-4761-9f43-5fbaa87d6df9" />
 
-
-- Customer Orders Tracking
-- Order Status Monitoring
+- Purchase History Overview
 - Delivered & Pending Orders
 - Payment Status Tracking
-- Prepaid & Due Payments
-- Purchase History Overview
-
+  
 ---
 
 ### Settings
 
-<img width="1920" height="1080" alt="Screenshot 2026-06-12 025829" src="https://github.com/user-attachments/assets/c098567b-6ae7-4a32-b01f-0667260e25d5" />
+### 1. Profile :
 
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 060121" src="https://github.com/user-attachments/assets/aa660333-7342-4274-8e88-47b3d7258e04" />
 
-- Profile Management
-- Preferences
-- Account Configuration
+- Personal Information Management
+- Profile Customization
+- Account Details Update
 
 ---
 
-## 🚀 Installation
+### 2. Security :
 
-Clone the repository
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 060136" src="https://github.com/user-attachments/assets/afdf53a8-3536-499f-a2b3-b91c3e345224" />
 
-```bash
-git clone https://github.com/Karan-oop/GlassDash_Admin_Dashboard.git
-```
+- Password Management
+- Account Protection Settings
+- Security Preferences
 
-Navigate to project folder
+---
 
-```bash
-cd GlassDash_Admin_Dashboard
-```
+### 3. Notifications :
 
-Install dependencies
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 060142" src="https://github.com/user-attachments/assets/b92aee5f-477b-4b82-b7ae-4c3167c4f67f" />
 
-```bash
-npm install
-```
+- Notification Preferences
+- Alert Management
+- Communication Settings
 
-Run development server
+### 4. Appearance :
 
-```bash
-npm run dev
-```
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 060145" src="https://github.com/user-attachments/assets/b4ca9615-72bd-4698-9aec-439ee3a57165" />
 
-Build for production
+- Theme Preferences
+- UI Customization Options
+- Visual Settings
 
-```bash
-npm run build
-```
+### 5. Billing: 
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 060149" src="https://github.com/user-attachments/assets/8b6b5021-42e5-4645-97ab-e0f94422660f" />
+
+- Billing Information
+- Payment Details
+- Subscription Management
 
 ---
 
@@ -402,7 +403,6 @@ This project helped me improve my understanding of:
 - Role-Based Access Control
 - Backend Integration
 - REST API Integration
-- Dark/Light Theme Toggle
 - Real-Time Notifications
 - Data Export Functionality
 - Advanced Filtering & Search
@@ -426,3 +426,4 @@ This project helped me improve my understanding of:
 If you found this project helpful, consider giving it a ⭐ on GitHub.
 
 It motivates me to continue building and sharing more projects.
+
