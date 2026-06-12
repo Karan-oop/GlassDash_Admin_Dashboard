@@ -1,4 +1,4 @@
-# Glass Dash — Modern Admin Dashboard
+# Glass Dash — Admin Dashboard
 
 A modern, responsive, and visually appealing Admin Dashboard built using React.js, JavaScript, HTML5, and CSS3.
 
@@ -6,11 +6,11 @@ Glass Dash is designed to simulate a real-world SaaS/Admin Panel experience with
 
 ---
 
-## Live Demo
+## Live Demo:
 
 🔗 https://glassdash-admin-dashboard.netlify.app/
 
-## GitHub Repository
+## GitHub Repository:
 
 🔗 https://github.com/Karan-oop/GlassDash_Admin_Dashboard
 
@@ -382,7 +382,7 @@ src/
 
 ---
 
-## 📚 Learning Outcomes
+## Learning Outcomes
 
 This project helped me improve my understanding of:
 
@@ -397,7 +397,7 @@ This project helped me improve my understanding of:
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Authentication System
 - Role-Based Access Control
@@ -409,11 +409,11 @@ This project helped me improve my understanding of:
 
 ---
 
-## 👨‍💻 Author
+## Developer </>
 
 ### Karan Chandra Kothari
 
-💼 Frontend Developer
+ Frontend Developer </>
 
 - GitHub: https://github.com/Karan-oop
 - LinkedIn: https://www.linkedin.com/in/karan-chandra-kothari-a36a2b382
@@ -421,7 +421,7 @@ This project helped me improve my understanding of:
 
 ---
 
-## ⭐ Support
+## Support
 
 If you found this project helpful, consider giving it a ⭐ on GitHub.
 
