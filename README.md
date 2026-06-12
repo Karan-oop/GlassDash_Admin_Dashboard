@@ -140,6 +140,17 @@ Personalized account management:
 
 ## 🛠 Technology Stack
 
+| Category | Technologies |
+|-----------|-------------|
+| **Frontend** | React.js, JavaScript (ES6+), HTML5, CSS3 |
+| **Development Tools** | Vite, ESLint, Git, GitHub |
+| **Architecture** | Component-Based Architecture, Reusable Components |
+| **Design** | Responsive Web Design, Modern Dashboard Layouts, UI/UX Design Principles |
+| **React Concepts** | Dynamic Rendering, State Management |
+
+
+## 🛠 Technology Stack
+
 ### Frontend
 
 - React.js
