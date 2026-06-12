@@ -184,7 +184,6 @@ src/
 - Email & Password Validation
 - User-Friendly Form Experience
 - Remember Me Functionality
-- Seamless Dashboard Access
 
 ---
 
@@ -196,7 +195,6 @@ src/
 - Activity Monitoring
 - Transactions Tracking
 - Traffic Sources
-- Project Progress
 
 ---
 
@@ -223,10 +221,9 @@ src/
 
 ### Product Management
 
-Listed Products
+### 1. Listed Products:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 053025" src="https://github.com/user-attachments/assets/3ecb7f4a-7e5a-43fc-8164-86e0f78bfedd" />
-
 
 - Product Search & Management
 - Product Editing Functionality
@@ -234,7 +231,7 @@ Listed Products
 
 ---
 
-Create New Product
+### 2. Create New Product:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 025802" src="https://github.com/user-attachments/assets/a59762e0-3d8c-4387-9daa-1a653bdfd485" />
 
@@ -247,7 +244,7 @@ Create New Product
 
 ### BLog Management
 
-Listed Blogs
+### 1. Listed Blogs:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 053208" src="https://github.com/user-attachments/assets/e2bb4869-6a70-4c0d-bc46-75314458deef" />
 
@@ -258,7 +255,7 @@ Listed Blogs
 
 ---
 
-Create New Blog
+### 2. Create New Blog:
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 053355" src="https://github.com/user-attachments/assets/7cfc436d-b3cf-47db-9a72-a29f523cb6e7" />
 
@@ -267,22 +264,33 @@ Create New Blog
 - Blog Metadata Management
 - Draft & Publishing Support
 
-### Coupon System
+---
 
-<img width="1920" height="1080" alt="Screenshot 2026-06-12 025812" src="https://github.com/user-attachments/assets/0b51bf32-4dd8-40fc-9f68-2984115a2fd7" />
+### Coupon Management System
 
+### 1. All Listed Coupons:
 
-<img width="1920" height="1080" alt="Screenshot 2026-06-12 025825" src="https://github.com/user-attachments/assets/e50e8607-42e8-4e43-856d-ac5cd41880a3" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 054357" src="https://github.com/user-attachments/assets/7cd05447-d091-48ee-a11d-d2d8b4315e54" />
 
-
-
-- Discount Generation
-- Campaign Management
-- Coupon Tracking
+- View All Coupons
+- Total Coupons Statistics
+- Active Coupons Tracking
+- Coupon Performance Insights
 
 ---
 
-### 👥 User Management
+### 2. Create New Coupon:
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 054403" src="https://github.com/user-attachments/assets/94fa823e-6a7d-44ce-a33b-dc83f1da633d" />
+
+- Random Coupon Generator
+- Percentage-Based Discounts
+- Coupon Expiry Configuration
+- Usage Limit Management
+
+  ---
+
+### User Management
 
 1. 📋 List of All Users
 
