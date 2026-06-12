@@ -409,7 +409,7 @@ This project helped me improve my understanding of:
 
 ---
 
-## Developer </> bx bxl-git
+## Developer </>
 
 ### Karan Chandra Kothari
 
