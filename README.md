@@ -174,8 +174,7 @@ src/
 
 ---
 
-## Screenshots
-
+## Screenshots Gallery
 
 ### Authentication System (LogIn Page)
 
@@ -193,40 +192,57 @@ src/
 
 <img width="1919" height="1079" alt="Screenshot 2026-06-12 025728" src="https://github.com/user-attachments/assets/88844821-9fd7-411c-9a13-d5c8ff6b646e" />
 
-
 - Revenue Analytics
 - Activity Monitoring
 - Transactions Tracking
 - Traffic Sources
 - Project Progress
 
+  ---
+
 ### Analytics Dashboard
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 025743" src="https://github.com/user-attachments/assets/c924287e-4675-4c7d-ba0b-1bef620b8639" />
-
 
 - Visitor Statistics
 - Device Distribution
 - Browser Insights
 - Geographic Analytics
 
-### User Management
+  ---
+
+### Users Management
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 025748" src="https://github.com/user-attachments/assets/df5d811f-12fe-42aa-b3c9-78c17fc6ba71" />
-
 
 - User Directory
 - Search & Filtering
 - User Status Monitoring
 
+---
+
 ### Product Management
+
+Listed Products
 
 <img width="1920" height="1080" alt="Screenshot 2026-06-12 025802" src="https://github.com/user-attachments/assets/5ce4242b-2a39-41d7-9c1b-1e4e7a957886" />
 
+- Product Search & Management
+- Product Editing Functionality
+- Product Status Monitoring
 
-- Product Creation
+---
+
+Create New Product
+
+<img width="1920" height="1080" alt="Screenshot 2026-06-12 025802" src="https://github.com/user-attachments/assets/a59762e0-3d8c-4387-9daa-1a653bdfd485" />
+
+- Product Creation Form
+- Product Categories Selection
 - Inventory Management
-- Product Metadata
+- Pricing Configuration
+
+---
 
 ### Coupon System
 
