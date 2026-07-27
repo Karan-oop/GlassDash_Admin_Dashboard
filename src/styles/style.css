@@ -206,7 +206,6 @@ body.light-theme ::-webkit-scrollbar-thumb {
     color 0.5s ease;
 }
 .glass-card:hover {
-  background: var(--glass-hover);
   box-shadow:
     var(--shadow),
     0 0 30px rgba(181, 173, 137, 0.18);
